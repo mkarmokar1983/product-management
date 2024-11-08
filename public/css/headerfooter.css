@@ -1,0 +1,296 @@
+/* CSS FOR Header */
+.header {
+  width: 100%;
+  height: 60px;
+  padding: 4px;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Header LOGO DeSIGN */
+.logo {
+  width: 10%;
+  height: 100%;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  width: 50px;
+}
+
+/* HEADER MENEU DESIGN */
+.menueBar {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  color: var(--primary-color);
+  padding: 4px;
+}
+
+li a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: normal;
+}
+
+li a:hover {
+  color: white;
+}
+
+.menue {
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.menue:hover {
+  cursor: pointer;
+
+  .subMenue {
+    display: block;
+  }
+}
+
+.subMenue {
+  display: none;
+  position: absolute;
+  background-color: var(--primary-color);
+  min-width: 180px;
+  padding: 8px;
+  overflow: auto;
+  z-index: 1;
+}
+
+.subMenue li {
+  font-size: 0.9rem;
+}
+
+/* HEADER USER DESIGN */
+.user {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+
+.user img {
+  height: 30px;
+  width: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.user span {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+}
+
+.userInfo {
+  display: none;
+  position: absolute;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  padding: 8px;
+  overflow: auto;
+  z-index: 1;
+  /* opacity: 80%; */
+}
+
+.user span:hover {
+  cursor: pointer;
+
+  .userInfo {
+    display: block;
+  }
+}
+
+/* .changeBody {
+  padding-top: 40px;
+  
+} */
+
+.passwordBody {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 4px;
+  width: 30%;
+  padding: 8px;
+  margin: auto;
+  border: var(--box-border);
+  box-shadow: 5px 5px 5px blue;
+  border-radius: 8px;
+  background-color: var(--secondary-color);
+}
+
+.passwordAction {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 8px;
+}
+.userProfile {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 136px);
+  /* border: 2px solid greenyellow; */
+}
+.profileImage {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border: var(--box-border);
+  border-radius: 4px;
+  padding: 8px;
+  height: 240px;
+}
+.profileImage img {
+  height: 120px;
+  width: 120px;
+  border: var(--box-border);
+  border-radius: 4px;
+}
+.profileInformation {
+  height: 240px;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-row-gap: 8px;
+  width: 45%;
+  border: var(--box-border);
+  border-radius: 4px;
+  padding: 8px;
+}
+
+/* FOOTER DESIGN */
+.footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 30px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Media Query for Small Devices Mobile */
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .header {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+  }
+
+  .logo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 1;
+    margin-bottom: 8px;
+  }
+
+  .menueBar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 20px;
+    order: 3;
+  }
+
+  .user {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    order: 2;
+    margin-bottom: 8px;
+    border-bottom: 1px solid black;
+    padding-bottom: 4px;
+  }
+
+  .menue {
+    /* position: relative; */
+    display: block;
+    margin-right: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .subMenue {
+    display: none;
+    position: relative;
+    background-color: var(--primary-color);
+    opacity: 80%;
+    width: calc(100vw - 40px);
+  }
+
+  .userInfo {
+    position: relative;
+  }
+  .changePassword {
+    width: 100%;
+  }
+  .userProfile {
+    flex-direction: column;
+    height: auto;
+    gap: 12px;
+  }
+  .profileImage {
+    width: 100%;
+    height: auto;
+  }
+  .profileInformation {
+    height: auto;
+    width: 100%;
+  }
+  .passwordBody {
+    width: 100%;
+  }
+}
+
+/* Media Query for Medium Device Mobile Mobile/Tablet */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+}
+
+/* Media Query for Large Device Mobile Tablet/Computer */
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+}
+/* Media Query for Large Device Mobile Tablet/Computer */
+@media only screen and (min-width: 1200px) and (max-width: 4000px) {
+}

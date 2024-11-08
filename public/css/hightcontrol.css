@@ -1,0 +1,41 @@
+/* User INFORMATION */
+.tableHeight {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 4px;
+  max-height: calc(100vh - 130px);
+  overflow-y: scroll;
+  overflow-x: scroll;
+  /* -webkit-overflow-scrolling: touch; */
+}
+
+
+/* Media for Mobile device. */
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .tableHeight {
+    height: auto;
+  }
+  th, td{
+    text-wrap: nowrap;
+  }
+}
+
+/* Media Query for Medium Device Mobile Mobile/Tablet */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .tableHeight {
+        height: auto;
+        overflow-x:scroll;
+        overflow-x: scroll;
+      }
+      th, td{
+        text-wrap: nowrap;
+      }
+}
+
+/* Media Query for Large Device Mobile Tablet/Computer */
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+}
+/* Media Query for Large Device Mobile Tablet/Computer */
+@media only screen and (min-width: 1200px) and (max-width: 4000px) {
+}
